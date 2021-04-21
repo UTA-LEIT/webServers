@@ -9,15 +9,14 @@ that you can call in the browser uppon after starting the server. Project also c
 This is  simply a boilerplate code for http/socket servers using python that can be expanded at will.
 
 ## Development setup
-
-*http server(Multithreaded or singlethreaded)
-  *Download the httpServer_multithread.py file, and the html files
+* http server(Multithreaded or singlethreaded)
+    *Download the httpServer_multithread.py file, and the html files
   *Keep all files in the same directory
   *if using in the same machine, keep the server IP as 0.0.0.0
   *if using in different machines, change the ip to the hostmachine ip
   *im using port 8080 but you are free to choose any port
   *access files using {ipaddress}:{port}/filename.html
-*socket server
+* socket server
   *Download client_multithreading_b.py and multithread_server_b.py
   *if using in the same machine, keep the server IP as 0.0.0.0
   *if using in different machines, change the ip to the hostmachine's ip
