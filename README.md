@@ -1,5 +1,5 @@
-# Socket Servers
-> Comunication through sockets
+# Web Socket Servers
+> Comunication through sockets from AR
 
 The project contains two examples of http socket servers one multithreaded and one singlethreaded, two examples of html files located in the root of the folder
 that you can call in the browser uppon after starting the server. Project also contains server/client multithreaded socket comunication.
