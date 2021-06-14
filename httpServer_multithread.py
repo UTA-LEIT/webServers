@@ -1,6 +1,7 @@
 from io import SEEK_CUR
 import socket, threading
 import time
+import random
 
 
 class serverthread(threading.Thread):
@@ -54,13 +55,15 @@ class connectionThread(threading.Thread):
 
             file = open(filename)
             content = file.read()
+            x= random.randrange(1,10)
+            print(threading.get_ident())
+            print('sleeping: '+str(x))
+            time.sleep(x)
             file.close()
-            print('we are sleeping...')
-            time.sleep(5)
             self.connsocket.send(b'HTTP/1.0 200 OK\n\n')
             for i in range(0,len(content)):
                 codedcontent = content[i].encode()
-                self.connsocket.send(codedcontent)
+                self.connsocket.sendall(codedcontent)
         except IOError:
             self.connsocket.send(b'HTTP/1.0 404 NOT FOUND\n')
         finally:
@@ -70,7 +73,7 @@ class connectionThread(threading.Thread):
 
 
 def main():
-    server = serverthread(8080)
+    server = serverthread(8020)
     server.daemon =1
     server.start()
     input('Press enter to exit...')
