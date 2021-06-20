@@ -1,6 +1,6 @@
 import socket
 
-server = '' #ip of the machine hosting the server
+server = '0.0.0.0' #ip of the machine hosting the server
 port =8080
 client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 client.connect((server,port))

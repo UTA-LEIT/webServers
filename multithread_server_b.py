@@ -19,7 +19,7 @@ class ClientThread(threading.Thread):
                 break
             time.sleep(2)
             print('from client',msg)
-            #self.csocket.send(bytes(msg,'utf-8'))
+            self.csocket.send(bytes(msg,'utf-8'))
         print('client at ',clientAddress,' diconnected...')
 
 
